@@ -15,3 +15,8 @@ Rust 学习笔记
 >
 > 加好之后再运行rustup-init.exe即可
 >> 原文链接：https://blog.csdn.net/bu2_int/article/details/79758960
+
+## 参考教程
+
+* [初识 Rust](https://www.ibm.com/developerworks/cn/opensource/os-know-rust/)
+* [通过例子学 Rust](https://rustwiki.org/zh-CN/rust-by-example/)
