@@ -20,3 +20,11 @@ Rust 学习笔记
 
 * [初识 Rust](https://www.ibm.com/developerworks/cn/opensource/os-know-rust/)
 * [通过例子学 Rust](https://rustwiki.org/zh-CN/rust-by-example/)
+
+### match
+
+相对于 `switch`
+
+### 子进程
+
+perlude 提供的 stdout、stdin会在使用一次后被移除。
