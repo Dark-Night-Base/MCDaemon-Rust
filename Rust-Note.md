@@ -16,6 +16,22 @@ Rust 学习笔记
 > 加好之后再运行rustup-init.exe即可
 >> 原文链接：https://blog.csdn.net/bu2_int/article/details/79758960
 
+> Crates 换源（Windows也适用）
+> 
+> 编辑`~/.cargo/config`：
+> 
+> [source.crates-io]
+> registry = "https://github.com/rust-lang/crates.io-index"
+> replace-with = 'ustc'
+> [source.ustc]
+> registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+> 
+> 如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
+> 
+> registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+> 
+>> 原文链接：https://www.linuxidc.com/Linux/2019-05/158485.htm
+
 ## 参考教程
 
 * [初识 Rust](https://www.ibm.com/developerworks/cn/opensource/os-know-rust/)
