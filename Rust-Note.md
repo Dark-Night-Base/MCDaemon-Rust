@@ -37,6 +37,8 @@ Rust 学习笔记
 * [初识 Rust](https://www.ibm.com/developerworks/cn/opensource/os-know-rust/)
 * [通过例子学 Rust](https://rustwiki.org/zh-CN/rust-by-example/)
 
+## Rust 语法
+
 ### match
 
 相对于 `switch`
@@ -44,3 +46,33 @@ Rust 学习笔记
 ### 子进程
 
 perlude 提供的 stdout、stdin会在使用一次后被移除。
+
+## Rust 交叉编译
+
+[参考教程](https://github.com/japaric/rust-cross)
+
+一般的编译过程：
+```Bash
+# 若需安装新的库，或第一次编译
+cargo build
+
+cargo run # 自动重新编译
+```
+
+交叉编译：
+```Bash
+# 查看支持的平台
+rustup target list
+
+# 安装对应平台
+rustup target add x86_64-unknown-linux-musl
+
+# 编辑项目下的 .cargo/config：
+[target.x86_64-unknown-linux-musl]
+linker = "rust-lld"
+# https://github.com/japaric/rust-cross/issues/33#issuecomment-500111581
+
+# 编译
+cargo build --target=x86_64-unknown-linux-musl
+
+```
